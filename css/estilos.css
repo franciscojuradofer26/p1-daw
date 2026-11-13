@@ -1,0 +1,66 @@
+/* --- Paleta de Colores (Tonos Azules) --- */
+:root {
+  --azul-fondo-pantalla: #e0f2fe; /* Azul cielo muy claro para el fondo de la ventana */
+  --blanco-caja: #ffffff;         /* Blanco para la tarjeta principal */
+  --azul-texto: #334155;          /* Gris azulado oscuro para que sea fácil de leer */
+  --azul-destacado: #0284c7;      /* Azul vibrante para el título central */
+  --azul-borde: #7dd3fc;          /* Azul medio para los detalles de los párrafos */
+  --azul-hover: #f0f9ff;          /* Azul ultra claro al pasar el ratón */
+}
+
+/* --- Fondo de la página --- */
+html {
+  background-color: var(--azul-fondo-pantalla);
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* --- La etiqueta BODY actúa como nuestro contenedor principal --- */
+body {
+  max-width: 550px;
+  margin: 50px auto; /* Centra la caja en la pantalla */
+  padding: 40px;
+  background-color: var(--blanco-caja);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(2, 132, 199, 0.15); /* Sombra azulada sutil */
+  border-top: 8px solid var(--azul-destacado);
+  color: var(--azul-texto);
+}
+
+/* --- Estilo del Título H1 --- */
+h1 {
+  color: var(--azul-destacado);
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--azul-borde);
+  font-size: 2rem;
+}
+
+/* --- Estilo de los Párrafos (Información del Servidor) --- */
+p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  padding: 12px 18px;
+  background-color: #f8fafc; /* Fondo gris/azul muy tenue */
+  border-left: 4px solid var(--azul-borde);
+  border-radius: 4px;
+  transition: all 0.3s ease; /* Transición suave */
+  /* Asegura que no haya márgenes raros al principio/final */
+  margin-top: 0; 
+}
+
+/* Efecto interactivo al pasar el ratón por cada línea del PHP */
+p:hover {
+  transform: translateX(8px); /* Desplaza ligeramente el texto a la derecha */
+  background-color: var(--azul-hover);
+  border-left-color: var(--azul-destacado);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Haz que el primer párrafo (tu nombre) destaque un poco más */
+p:first-of-type {
+  font-weight: bold;
+  background-color: var(--azul-hover);
+  border-left-color: var(--azul-destacado);
+}
